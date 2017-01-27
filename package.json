@@ -1,0 +1,39 @@
+{
+  "name": "imposterSyndrome",
+  "version": "1.0.0",
+  "description": "Alexa skill to calm your imposter syndrome before an interview.",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "istanbul cover _mocha",
+    "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "gulp": "gulp",
+    "lint": "gulp lint"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "brittdawndev@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "coveralls": "^2.11.15",
+    "istanbul": "^0.4.5",
+    "superagent": "^3.4.0"
+  },
+  "devDependencies": {
+    "alexa-app": "^2.4.0",
+    "aws-lambda-mock-context": "^3.0.1",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "gulp": "^3.9.1",
+    "gulp-cache": "^0.4.5",
+    "gulp-eslint": "^3.0.1",
+    "gulp-istanbul": "^1.1.1",
+    "gulp-mocha": "^3.0.1",
+    "lodash": "^4.17.4",
+    "mocha": "^3.2.0",
+    "request": "^2.79.0",
+    "request-promise": "^4.1.1",
+    "winston": "^2.3.1"
+  }
+}
