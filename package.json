@@ -1,27 +1,23 @@
 {
   "name": "imposterSyndrome",
   "version": "1.0.0",
-  "description": "Alexa skill to calm your imposter syndrome before an interview.",
-  "main": "gulpfile.js",
-  "directories": {
-    "test": "istanbul cover _mocha",
-    "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+  "description": "An [AWS Lambda](http://aws.amazon.com/lambda) function with a custom imposter syndrome tips Alexa skill.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
     "gulp": "gulp",
     "lint": "gulp lint"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [],
-  "author": "brittdawndev@gmail.com",
+  "author": "Britt Johnson",
   "license": "MIT",
   "dependencies": {
     "coveralls": "^2.11.15",
     "istanbul": "^0.4.5",
-    "superagent": "^3.4.0"
+    "superagent": "^3.3.2"
   },
   "devDependencies": {
-    "alexa-app": "^2.4.0",
+    "alexa-app": "^2.3.4",
     "aws-lambda-mock-context": "^3.0.1",
     "chai": "^3.5.0",
     "chai-as-promised": "^6.0.0",
@@ -30,10 +26,10 @@
     "gulp-eslint": "^3.0.1",
     "gulp-istanbul": "^1.1.1",
     "gulp-mocha": "^3.0.1",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.3",
     "mocha": "^3.2.0",
     "request": "^2.79.0",
     "request-promise": "^4.1.1",
-    "winston": "^2.3.1"
+    "winston": "^2.3.0"
   }
 }
