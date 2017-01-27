@@ -18,14 +18,14 @@ var ImposterSyndrome = function () {
 
 // Extend AlexaSkill
 ImposterSyndrome.prototype = Object.create(AlexaSkill.prototype);
-ImposterSyndrome.prototype.constructor = Tip;
+ImposterSyndrome.prototype.constructor = ImposterSyndrome;
 
 ImposterSyndrome.prototype.eventHandlers.onSessionStarted = function (sessionStartedRequest, session) {
   console.log('onSessionStarted requestId: ' + sessionStartedRequest.requestId + ', sessionId: ' + session.sessionId);
 };
 
 ImposterSyndrome.prototype.eventHandlers.onLaunch = function (launchRequest, session, response) {
-  handleNewTipRequest(response);
+  handleNewImposterSyndromeRequest(response);
 };
 
 ImposterSyndrome.prototype.eventHandlers.onSessionEnded = function (sessionEndedRequest, session) {
@@ -34,7 +34,7 @@ ImposterSyndrome.prototype.eventHandlers.onSessionEnded = function (sessionEnded
 
 ImposterSyndrome.prototype.intentHandlers = {
   'GetNewImposterSyndromeIntent': function (intent, session, response) {
-    handleNewTipRequest(response);
+    handleNewImposterSyndromeRequest(response);
   },
 
   'AMAZON.HelpIntent': function (intent, session, response) {
