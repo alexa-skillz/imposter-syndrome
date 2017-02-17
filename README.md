@@ -9,3 +9,4 @@ You can say:
 ```
 Alexa, open Imposter Syndrome and calm me down.
 ```
+Britt Dawn
